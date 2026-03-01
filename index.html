@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Village Bus Tracking</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #bus {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>AI Bus Tracking System</h1>
+    <p>Village Smart Transport</p>
+
+    <button onclick="trackBus()">Track Bus</button>
+
+    <div id="bus"></div>
+
+    <script>
+        function trackBus() {
+            let distance = Math.floor(Math.random() * 10) + 1;
+            let eta = distance * 5;
+
+            document.getElementById("bus").innerHTML =
+                "Bus is " + distance + " km away.<br>Estimated Arrival Time: " + eta + " minutes.";
+        }
+    </script>
+
+</body>
+
+</html>
